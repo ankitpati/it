@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- power.tld -->
+<!-- Date  : 18 October 2016
+   - Author: Ankit Pati
+   -->
+
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+    <tlib-version>1.0</tlib-version>
+    <tag>
+        <name>power</name>
+        <tag-class>in.edu.sitpune.Power</tag-class>
+
+        <attribute>
+            <name>base</name>
+            <required>true</required>
+        </attribute>
+        <attribute>
+            <name>power</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+</taglib>
+<!-- end of power.tld -->
