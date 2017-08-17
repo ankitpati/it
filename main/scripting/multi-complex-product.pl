@@ -16,8 +16,6 @@ sub cmpmul {                                        # function from Question 7
     };
 }
 
-my @cmpls;
-
 print <<"EOF";
 Enter complex numbers to be multiplied.
     Real & Imaginary parts separated by space,
@@ -26,22 +24,20 @@ Enter complex numbers to be multiplied.
 
 EOF
 
-while (<>) {
-    chomp;
-    last unless $_;
-
-    my @parts = split ' ';
-    push @cmpls, {
-        r => $parts[0],
-        i => $parts[1],
-    };
-}
-
 my $result = {
     r => 1,
     i => 0,
 };
 
-$result = cmpmul $result, $_ foreach @cmpls;
+while (<>) {
+    chomp;
+    last unless $_;
+
+    my @parts = split ' ';
+    $result = cmpmul $result, {
+        r => $parts[0],
+        i => $parts[1],
+    };
+}
 
 print "Result = $result->{r} + $result->{i}i\n";
